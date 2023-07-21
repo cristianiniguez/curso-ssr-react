@@ -16,6 +16,8 @@ export const template = (html: string) => {
 
     <body>
       <div id="app">${html}</div>
+
+      <script src="app.js"></script>
     </body>
 
     </html>
