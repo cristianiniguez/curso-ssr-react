@@ -1,11 +1,11 @@
 import express from 'express';
 import { config } from './config';
-import { template } from './render/template';
+import { render } from './render';
 
 const app = express();
 
 app.get('*', (req, res) => {
-  res.send(template(`<h1>Hola mundo con ruta: ${req.url}</h1>`));
+  res.send(render(req.url));
 });
 
 app.listen(config.PORT, () => {
